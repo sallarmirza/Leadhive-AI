@@ -13,7 +13,7 @@ import { Channels } from '@/features/marketing/components/Channels'
 import { MobileExperience } from '@/features/marketing/components/MobileExperience'
 import { CTA } from '@/features/marketing/components/CTA'
 import { LegalPage } from '@/pages/LegalPage'
-import { TestDemoPage } from '@/pages/TestDemoPage'
+import { YoutubeApp } from '@/features/youtube/YoutubeApp'
 
 export default function App() {
   const path = window.location.pathname.replace(/\/$/, '') || '/'
@@ -37,7 +37,7 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHash)
   }, [])
 
-  if (path === '/test-demo') return <TestDemoPage />
+  if (path === '/test-demo') return <YoutubeApp />
 
   if (path === '/privacy' || path === '/terms') {
     return <LegalPage type={path === '/privacy' ? 'privacy' : 'terms'} />

@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react'
 import { ArrowLeft, ChartNoAxesColumn, ExternalLink, RefreshCw } from 'lucide-react'
 import { ConnectionRequired, EmptyState, Panel, PanelHeader, ResourceStatus, ScreenHeading } from '../../../features/youtube/DemoUI'
-import { useYoutubeResource, type YouTubeController } from '../../../hooks/useYouTubeIntelligence'
+import { useYoutubeResource, type YouTubeController } from '../hooks'
 import type { ScreenNavigation, VideoMetrics } from '../../../features/youtube/types'
 
 export function AnalyticsDashboard({ controller: c, navigate }: ScreenNavigation & { controller: YouTubeController }) {

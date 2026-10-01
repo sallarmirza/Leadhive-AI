@@ -8,13 +8,13 @@ import { ContentSelection } from '@/features/youtube/screens/ContentSelection'
 import { CommandCenter } from '@/features/youtube/screens/CommandCenter'
 import { AnalyticsDashboard } from '@/features/youtube/screens/AnalyticsDashboard'
 import { IntelligenceDashboard } from '@/features/youtube/screens/IntelligenceDashboard'
-import { useYouTubeIntelligence } from '@/features/youtube/hooks'
+import { useYouTubeIntelligence } from './hooks'
 import { screenFromHash, type DemoScreen } from '@/features/youtube/types'
 import '@/features/youtube/styles/workspace.css'
 import '@/features/youtube/styles/intelligence.css'
 import '@/features/youtube/styles/premium.css'
 
-export function TestDemoPage() {
+export function YoutubeApp() {
   const [screen, setScreen] = useState(screenFromHash)
   const controller = useYouTubeIntelligence()
   useEffect(() => {

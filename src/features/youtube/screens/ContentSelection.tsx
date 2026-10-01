@@ -1,6 +1,6 @@
 import { Check, Files, ImageIcon } from 'lucide-react'
 import { ConnectionRequired, EmptyState, Panel, PanelHeader, ResourceStatus, ScreenHeading, StepActions } from '../../../features/youtube/DemoUI'
-import { type YouTubeController } from '../../../hooks/useYouTubeIntelligence'
+import { type YouTubeController } from '../hooks'
 import type { ScreenNavigation, Video } from '../../../features/youtube/types'
 
 export function ContentSelection({ controller: c, navigate }: ScreenNavigation & { controller: YouTubeController }) {

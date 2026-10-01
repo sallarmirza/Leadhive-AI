@@ -1,8 +1,9 @@
 ﻿import { ArrowRight, Check, Link2 } from 'lucide-react'
-import { youtubeAuthUrl } from '../../../services/youtubeApi'
+import { youtubeAuthUrl } from '../api'
 import { ConnectButton, EmptyState, Panel, PanelHeader, ScreenHeading, StatusBadge, StepActions } from '../../../features/youtube/DemoUI'
 import type { ScreenNavigation } from '../../../features/youtube/types'
-import type { YouTubeController } from '../../../hooks/useYouTubeIntelligence'
+import type { YouTubeController } from '../hooks'
+
 
 export function ChannelSetup({ controller: c, navigate }: ScreenNavigation & { controller: YouTubeController }) {
   const channels = c.session?.channels || []

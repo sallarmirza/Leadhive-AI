@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { ArrowLeft, ArrowRight, Link2, LoaderCircle } from 'lucide-react'
-import { youtubeAuthUrl } from '../../services/youtubeApi'
+import { youtubeAuthUrl } from './api'
 
 export function StatusBadge({ children, tone = 'neutral' }: { children: ReactNode; tone?: 'neutral' | 'success' | 'warning' | 'accent' }) {
   return <span className={'td-status-badge td-status-' + tone}><i aria-hidden="true" />{children}</span>

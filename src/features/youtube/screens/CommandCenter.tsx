@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, Bot, List, Play, Square, X } from 'lucide-react'
-import { youtubeRequest } from '../../../services/youtubeApi'
-import type { YouTubeController } from '../../../hooks/useYouTubeIntelligence'
+import { youtubeRequest } from '../api'
+import type { YouTubeController } from '../hooks'
 import { ConnectionRequired, EmptyState, Panel, PanelHeader, ScreenHeading, StatusBadge, StepActions } from '../../../features/youtube/DemoUI'
 import type { Activity, Schedule, ScreenNavigation } from '../../../features/youtube/types'
 

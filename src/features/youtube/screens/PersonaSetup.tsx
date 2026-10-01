@@ -1,7 +1,7 @@
 import { Building2, Globe2, Sparkles } from 'lucide-react'
 import { ConnectionRequired, Panel, PanelHeader, ScreenHeading, StatusBadge, StepActions } from '../../../features/youtube/DemoUI'
 import type { Profile, ScreenNavigation } from '../../../features/youtube/types'
-import type { YouTubeController } from '../../../hooks/useYouTubeIntelligence'
+import type { YouTubeController } from '../hooks'
 
 export function PersonaSetup({ controller: c, navigate }: ScreenNavigation & { controller: YouTubeController }) {
   const update = (key: keyof Profile, value: string) => c.setProfile({ ...c.profile, [key]: value })
