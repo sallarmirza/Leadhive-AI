@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, Bot, List, Play, Square, X } from 'lucide-react'
 import { youtubeRequest } from '../../../services/youtubeApi'
 import type { YouTubeController } from '../../../hooks/useYouTubeIntelligence'
-import { ConnectionRequired, EmptyState, Panel, PanelHeader, ScreenHeading, StatusBadge, StepActions } from '../DemoUI'
-import type { Activity, Schedule, ScreenNavigation } from '../types'
+import { ConnectionRequired, EmptyState, Panel, PanelHeader, ScreenHeading, StatusBadge, StepActions } from '../../../features/youtube/DemoUI'
+import type { Activity, Schedule, ScreenNavigation } from '../../../features/youtube/types'
 
 export function CommandCenter({ controller: c, navigate }: ScreenNavigation & { controller: YouTubeController }) {
   const [logs, setLogs] = useState<Activity[]>([])

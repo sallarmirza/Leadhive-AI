@@ -1,7 +1,7 @@
 ﻿import { ArrowRight, Check, Link2 } from 'lucide-react'
 import { youtubeAuthUrl } from '../../../services/youtubeApi'
-import { ConnectButton, EmptyState, Panel, PanelHeader, ScreenHeading, StatusBadge, StepActions } from '../DemoUI'
-import type { ScreenNavigation } from '../types'
+import { ConnectButton, EmptyState, Panel, PanelHeader, ScreenHeading, StatusBadge, StepActions } from '../../../features/youtube/DemoUI'
+import type { ScreenNavigation } from '../../../features/youtube/types'
 import type { YouTubeController } from '../../../hooks/useYouTubeIntelligence'
 
 export function ChannelSetup({ controller: c, navigate }: ScreenNavigation & { controller: YouTubeController }) {
@@ -15,7 +15,7 @@ export function ChannelSetup({ controller: c, navigate }: ScreenNavigation & { c
           Authorize YouTube, choose the channel LeadHive should manage, and keep the workspace tied to verified channel data.
         </ScreenHeading>
         {channels.length > 0 && (
-          <a href={youtubeAuthUrl('/auth/youtube/login')} className="td-button td-button-secondary yi-connect-another">
+          <a href={youtubeAuthUrl('/api/youtube/auth/login')} className="td-button td-button-secondary yi-connect-another">
             <Link2 size={15} /> Connect another account
           </a>
         )}

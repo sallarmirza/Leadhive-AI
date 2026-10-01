@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { youtubeRequest } from '../services/youtubeApi'
-import type { Channel, Profile, Schedule, Session, Video, Workspace } from '../components/test-demo/types'
+import type { Channel, Profile, Schedule, Session, Video, Workspace } from '../features/youtube/types'
 
 const CHANNEL_STORAGE_KEY = 'leadhive.youtube.channel_id'
 const blankProfile: Profile = { business_name: '', website: '', services: '', brand_tone: '', ai_rules: '' }

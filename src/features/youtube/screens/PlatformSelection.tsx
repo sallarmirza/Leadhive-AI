@@ -1,8 +1,8 @@
 import { useRef, type PointerEvent } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { ArrowRight, Bot, Check, Cpu, MessageCircle, Send, Sparkles } from 'lucide-react'
-import { ConnectButton } from '../DemoUI'
-import type { ScreenNavigation } from '../types'
+import { ConnectButton } from '../../../features/youtube/DemoUI'
+import type { ScreenNavigation } from '../../../features/youtube/types'
 
 type PlatformMarkProps = { size?: number }
 function YouTubeMark({ size = 16 }: PlatformMarkProps) {

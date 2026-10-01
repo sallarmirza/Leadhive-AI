@@ -1,9 +1,9 @@
 ﻿import { useEffect, useState } from 'react'
 import { animate, motion, useReducedMotion } from 'motion/react'
 import { ArrowRight, ChartNoAxesColumn, Eye, MessageSquare, TrendingUp, Users } from 'lucide-react'
-import { ConnectionRequired, EmptyState, Panel, PanelHeader, ResourceStatus, ScreenHeading, StatusBadge } from '../DemoUI'
+import { ConnectionRequired, EmptyState, Panel, PanelHeader, ResourceStatus, ScreenHeading, StatusBadge } from '../../../features/youtube/DemoUI'
 import { useYoutubeResource, type YouTubeController } from '../../../hooks/useYouTubeIntelligence'
-import type { ScreenNavigation, VideoMetrics } from '../types'
+import type { ScreenNavigation, VideoMetrics } from '../../../features/youtube/types'
 
 function Counter({ value }: { value: number | null }) {
   const reduced = useReducedMotion()
