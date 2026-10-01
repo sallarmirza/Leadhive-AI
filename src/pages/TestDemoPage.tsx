@@ -10,9 +10,9 @@ import { AnalyticsDashboard } from '@/features/youtube/screens/AnalyticsDashboar
 import { IntelligenceDashboard } from '@/features/youtube/screens/IntelligenceDashboard'
 import { useYouTubeIntelligence } from '@/hooks/useYouTubeIntelligence'
 import { screenFromHash, type DemoScreen } from '@/features/youtube/types'
-import '@/styles/test-demo.css'
-import '@/styles/youtube-intelligence.css'
-import '@/styles/premium-white-demo.css'
+import '@/features/youtube/styles/workspace.css'
+import '@/features/youtube/styles/intelligence.css'
+import '@/features/youtube/styles/premium.css'
 
 export function TestDemoPage() {
   const [screen, setScreen] = useState(screenFromHash)
