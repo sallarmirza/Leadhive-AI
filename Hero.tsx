@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView, useReducedMotion } from 'motion/react'
 import { ArrowRight, ChevronRight } from 'lucide-react'
-import { HeroPipelineVisual } from './HeroPipelineVisual'
+import { HeroPipelineVisual } from './src/features/marketing/components/HeroPipelineVisual'
 
 const ease = [0.16, 1, 0.3, 1] as const
 

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { motion, useInView, useReducedMotion } from 'motion/react'
 import { AlertCircle, ArrowRight, CheckCircle2, Mail } from 'lucide-react'
-import { Reveal } from './ui/Reveal'
+import { Reveal } from '../../../components/ui/Reveal'
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
 
