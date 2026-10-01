@@ -12,7 +12,7 @@ import { WhyLeadHive } from '@/features/marketing/sections/WhyLeadHive'
 import { Channels } from '@/features/marketing/components/Channels'
 import { MobileExperience } from '@/features/marketing/components/MobileExperience'
 import { CTA } from '@/features/marketing/components/CTA'
-import { LegalPage } from '@/pages/LegalPage'
+import { LegalPage } from '@/features/legal/LegalPage'
 import { YoutubeApp } from '@/features/youtube/YoutubeApp'
 
 export default function App() {
