@@ -69,7 +69,7 @@ export function EmptyState({ icon, title, children, action }: { icon: ReactNode;
 
 export function ConnectButton() {
   return (
-    <a className="button td-button td-button-primary" href={youtubeAuthUrl('/auth/youtube/login')}>
+    <a className="button td-button td-button-primary" href={youtubeAuthUrl('/api/youtube/auth/login')}>
       <Link2 size={16} /> Connect YouTube
     </a>
   )

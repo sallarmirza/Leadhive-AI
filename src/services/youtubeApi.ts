@@ -8,7 +8,7 @@ function youtubeUrl(path: string) {
   return YOUTUBE_API_BASE_URL ? YOUTUBE_API_BASE_URL + path : path
 }
 
-export function youtubeAuthUrl(path: '/auth/youtube/login' | '/auth/youtube/callback') {
+export function youtubeAuthUrl(path: '/api/youtube/auth/login' | '/auth/youtube/callback') {
   return youtubeUrl(path)
 }
 

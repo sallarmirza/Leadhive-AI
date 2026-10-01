@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* the 16 --td-* vars from youtube-intelligence.css, mapped to Tailwind names */
+  --color-cyan:         #22d3ee;   /* tailwind cyan-400 — the "final pass" value */
+  --color-cyan-deep:    #0891b2;   /* cyan-600 */
+  --color-cyan-soft:    #67e8f9;   /* cyan-300 */
+  --color-ink:          #08111f;
+  --color-ink-soft:     #526174;   /* slate-500 */
+  --color-ink-muted:    #718096;
+  --color-ink-dim:      #94a3b8;
+  --color-success:      #16a36b;
+  --color-warning:      #f59e0b;
+  --color-danger:       #ef4444;
+
+  --radius-td:          14px;
+  --radius-td-sm:       10px;
+  --shadow-td:          0 24px 64px -46px rgba(15, 23, 42, 0.44);
+  --shadow-td-hover:    0 32px 82px -50px rgba(15, 23, 42, 0.52);
+
+  --font-display:       "Inter Display", system-ui, sans-serif;
+  --font-mono:          "JetBrains Mono", ui-monospace, monospace;
+}
