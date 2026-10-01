@@ -1,4 +1,4 @@
-import { Reveal } from '../components/ui/Reveal'
+import { Reveal } from "@/components/ui/Reveal"
 
 const pressurePoints = [
   ['01', 'Fragmented channels', 'Demand lands in separate inboxes.', 'WhatsApp, Instagram, Messenger, and web chat each create a different queue and an incomplete customer view.'],

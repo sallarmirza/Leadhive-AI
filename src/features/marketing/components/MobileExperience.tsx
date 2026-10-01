@@ -1,7 +1,7 @@
 import { ArrowRight, Bell, Check, MessageSquare } from 'lucide-react'
 import { motion } from 'motion/react'
 import { Reveal } from '../../../components/ui/Reveal'
-import { additionalLeads, primaryLead, salesRepresentative } from '../../../data/demoData'
+import { additionalLeads, primaryLead, salesRepresentative } from '../data/demoData'
 import { useViewportCycle } from '../../../hooks/useViewportCycle'
 
 const features = [

@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import { Reveal } from '../components/ui/Reveal'
+import { Reveal } from '@/components/ui/Reveal'
 
 const shifts = [
   ['Fragmented inboxes', 'Unified demand view'],

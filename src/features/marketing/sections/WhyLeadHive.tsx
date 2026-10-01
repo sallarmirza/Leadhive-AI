@@ -1,5 +1,5 @@
 import { Layers, Target, Zap } from 'lucide-react'
-import { Reveal } from '../components/ui/Reveal'
+import { Reveal } from '@/components/ui/Reveal'
 
 const benefits = [
   ['One intelligent frontline', 'Every channel becomes one consistent, intelligent customer experience.', Layers],

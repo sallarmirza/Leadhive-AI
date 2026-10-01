@@ -1,6 +1,6 @@
-import { Reveal } from '../components/ui/Reveal'
+import { Reveal } from '@/components/ui/Reveal'
 import { motion } from 'motion/react'
-import { useViewportCycle } from '../hooks/useViewportCycle'
+import { useViewportCycle } from '@/hooks/useViewportCycle'
 
 const trustSignals = ['AI Engineering', 'Customer Experience', 'Sales Automation', 'Enterprise Delivery']
 
