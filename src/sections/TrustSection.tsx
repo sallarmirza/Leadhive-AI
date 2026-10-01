@@ -1,4 +1,4 @@
-import { Reveal } from '../components/Reveal'
+import { Reveal } from '../components/ui/Reveal'
 import { motion } from 'motion/react'
 import { useViewportCycle } from '../hooks/useViewportCycle'
 

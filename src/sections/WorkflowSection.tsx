@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView, useReducedMotion } from 'motion/react'
 import { BrainCircuit, Gauge, MessageCircle, Send, SlidersHorizontal } from 'lucide-react'
-import { Reveal } from '../components/Reveal'
+import { Reveal } from '../components/ui/Reveal'
 
 const steps = [
   ['01', 'Incoming message', 'Demand arrives on any connected channel.', 'LeadHive receives the conversation and keeps its source and history.', MessageCircle],

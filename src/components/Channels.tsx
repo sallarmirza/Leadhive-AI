@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView, useReducedMotion } from 'motion/react'
 import { Check, Globe2, Sparkles } from 'lucide-react'
-import { Reveal } from './Reveal'
+import { Reveal } from './ui/Reveal'
 
 function WhatsAppIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.55 14.9L2 22l5.25-1.37A9.9 9.9 0 1 0 12 2Zm0 18.16c-1.46 0-2.9-.39-4.16-1.13l-.3-.18-3.11.82.82-3.02-.19-.31a8.22 8.22 0 1 1 6.94 3.82Zm4.52-6.15c-.24-.12-1.47-.73-1.7-.81-.23-.09-.39-.13-.56.12-.17.25-.65.81-.79.98-.14.16-.28.18-.53.06-.25-.12-1.06-.39-2.01-1.24-.74-.65-1.24-1.46-1.39-1.71-.14-.25-.01-.38.11-.5l.38-.44c.12-.14.16-.25.25-.41.08-.17.04-.32-.02-.44l-.76-1.84c-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.31 3.8 2.53 1.09 2.53.73 2.99.69.45-.05 1.47-.6 1.67-1.18.21-.59.21-1.09.15-1.19-.06-.1-.22-.16-.47-.28Z"/></svg> }
 function FacebookIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.8 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5H17V3.7c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.8V13h2.7v8h3.3Z"/></svg> }

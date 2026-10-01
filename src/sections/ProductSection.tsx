@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView, useReducedMotion } from 'motion/react'
 import { Check, Inbox, Search, Send } from 'lucide-react'
-import { Reveal } from '../components/Reveal'
+import { Reveal } from '../components/ui/Reveal'
 import { additionalLeads, primaryLead } from '../data/demoData'
 
 const states = [

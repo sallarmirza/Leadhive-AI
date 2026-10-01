@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react'
-import { Reveal } from './Reveal'
+import { Reveal } from '../ui/Reveal'
 
 export function Footer() {
   const homePath = window.location.pathname === '/'
