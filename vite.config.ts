@@ -4,31 +4,52 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '')
+  const env = loadEnv(mode, process.cwd())
 
-  const youtubeProxy = {
-    '/api/youtube': {
-      target: env.VITE_YOUTUBE_API_URL,
-      changeOrigin: true,
-      secure: true,
+  const rawBackend = 'https://8qgnw9pl-8001.inc1.devtunnels.ms'
+  if (!rawBackend) {
+    throw new Error('VITE_YOUTUBE_API_URL is not set')
+  }
+  const backend = rawBackend.replace(/\/+$/, '')
+  console.log('[vite] proxy target:', backend)
 
-      // bot.py keeps OAuth at /auth/youtube, while session remains under /api/youtube.
-      // Map only those two OAuth endpoints; do not remove the API prefix generally.
-      rewrite: (path: string) => {
-        if (path === '/api/youtube/auth/login') {
-          return '/auth/youtube/login'
-        }
-
-        if (path.startsWith('/api/youtube/auth/callback')) {
-          return path.replace(
-            '/api/youtube/auth/callback',
-            '/auth/youtube/callback'
-          )
-        }
-
-        return path
-      },
+  const base = {
+    target: backend,
+    changeOrigin: true,
+    secure: true,
+    headers: { 'X-Tunnel-Skip-AntiPhishing-Page': 'true' },
+    configure: (proxy: any) => {
+      proxy.on('error', (err: Error, req: { url?: string }) => {
+        console.error('[proxy error]', req.url, err.message)
+      })
+      proxy.on('proxyReq', (proxyReq: { path: string }, req: { method?: string; url?: string }) => {
+        console.log('[proxy ->]', req.method, req.url, '=>', backend + proxyReq.path)
+      })
+      proxy.on('proxyRes', (proxyRes: { statusCode?: number }, req: { url?: string }) => {
+        console.log('[proxy <-]', proxyRes.statusCode, req.url)
+      })
     },
+  }
+
+  // Let browser page navigations fall through to the SPA; proxy only fetch/XHR.
+  const spaSafe = {
+    ...base,
+    bypass: (req: { headers: { accept?: string } }) =>
+      req.headers.accept?.includes('text/html') ? '/index.html' : undefined,
+  }
+
+  const backendProxy = {
+    // OAuth: frontend calls /api/youtube/auth/*, backend serves /auth/youtube/*
+    '/api/youtube/auth': {
+      ...base,
+      rewrite: (p: string) => p.replace('/api/youtube/auth', '/auth/youtube'),
+    },
+    '/api': base,
+    '/save-profile': base,
+    '/save-selected-videos': base,
+    // Same names as possible frontend routes, so keep SPA navigation working
+    '/dashboard': spaSafe,
+    '/analytics': spaSafe,
   }
 
   return {
@@ -39,11 +60,11 @@ export default defineConfig(({ mode }) => {
     },
 
     server: {
-      proxy: youtubeProxy,
+      host: 'localhost',
+      port: 5173,
+      strictPort: true,
+      proxy: backendProxy,
     },
-
-    preview: {
-      proxy: youtubeProxy,
-    },
+    preview: { proxy: backendProxy },
   }
 })

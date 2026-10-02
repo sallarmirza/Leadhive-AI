@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { ArrowLeft, ArrowRight, Link2, LoaderCircle } from 'lucide-react'
 import { youtubeAuthUrl } from './api'
 
+
 export function StatusBadge({ children, tone = 'neutral' }: { children: ReactNode; tone?: 'neutral' | 'success' | 'warning' | 'accent' }) {
   return <span className={'td-status-badge td-status-' + tone}><i aria-hidden="true" />{children}</span>
 }
@@ -69,7 +70,7 @@ export function EmptyState({ icon, title, children, action }: { icon: ReactNode;
 
 export function ConnectButton() {
   return (
-    <a className="button td-button td-button-primary" href={youtubeAuthUrl('/api/youtube/auth/login')}>
+    <a className="button td-button td-button-primary" href={youtubeAuthUrl('/auth/youtube/login')}>
       <Link2 size={16} /> Connect YouTube
     </a>
   )
